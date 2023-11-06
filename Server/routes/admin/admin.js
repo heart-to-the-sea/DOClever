@@ -44,7 +44,7 @@ function Admin()
     this.userStatistics=async (req,res)=>{
         try
         {
-            let obj=await (this.admin.userStatistics());
+            let obj=await (this.admin.userStatistics(req.clientParam));
             util.ok(res,obj,"ok");
         }
         catch (err)
